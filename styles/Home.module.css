@@ -1,0 +1,6 @@
+.hombanner {
+	background-image: url(../public/images/banner.jpeg);
+	background-position: 0 80%;
+    background-size: cover;
+    min-height: 70vh;
+}
