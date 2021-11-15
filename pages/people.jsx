@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import oneImage from '../public/images/image.jpg'
 import Link from 'next/link'
+import Meta from '../components/Meta'
 const people = ({popular}) => {
-	console.log(popular);
-
 	return (
 		<>
+		<Meta title="People" />
 			<section className="p-12">
 				<div className="container m-auto">
 					<h2 className="text-green-500 text-xl font-bold uppercase">Popular People</h2>
@@ -43,10 +43,8 @@ export default people
 export const getStaticProps = async () => {
 	const APP_KEY = '024a419efaa3f8862e57d7434e765ffa'; 
 	const response = await fetch(`https://api.themoviedb.org/3/person/popular?api_key=${APP_KEY}&language=en-US&page=1`)
-
 	const data = await response.json()
 	const popular = data.results
-
 
 	return {
 	  props: {

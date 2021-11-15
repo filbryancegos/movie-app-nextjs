@@ -3,12 +3,15 @@ import Button from '../components/Button'
 import Image from 'next/image'
 import moviepic from '../public/images/image.jpg'
 import MovieList from '../components/Popular/MovieList'
+import Meta from '../components/Meta'
+
 
 export default function Home({popular, upcoming}) {
 
   return (
     <>
-	<section className={`bg-black flex items-center ${homeStyles.hombanner}`}>
+	<Meta />
+	<section className={`bg-black flex items-center px-12 ${homeStyles.hombanner}`}>
 		<div className="container m-auto">
 			<span className="text-green-500 uppercase font-bold">podcast</span>
 			<h1 className="text-white text-5xl uppercase font-bold">Discover New Knowledge<br /> Anywhere and Anytime!</h1>
@@ -18,7 +21,7 @@ export default function Home({popular, upcoming}) {
 			</div>
 		</div>
 	</section>
-	<section className="p-4 bg-green-500">
+	<section className="p-4 bg-green-500 px-12">
 		<div className="flex container m-auto">
 			<div className="text-white font-bold text-2xl">Millions of movies, TV shows and people to discover. Explore now.</div>
 		</div>
